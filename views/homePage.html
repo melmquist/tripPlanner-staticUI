@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h1>Home Page!!!!!!!!</h1>
+
+  <hr>
+
+  <h5>Hotels</h5>
+  <select name="Hotels">
+    {% for key in templateHotels %}
+    <option>{{ key.name }}</option>
+    {% endfor %}
+  </select>
+
+  <h5>Restaurants</h5>
+  <select name="Restaurants">
+    {% for key in templateRestaurants %}
+    <option>{{ key.name }}</option>
+    {% endfor %}
+  </select>
+
+  <h5>Activities</h5>
+  <select name="Activities">
+    {% for key in templateActivities %}
+    <option>{{ key.name }}</option>
+    {% endfor %}
+  </select>
+
+  <hr>
+  <iframe
+    width="600"
+    height="450"
+    frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD2RRkk1yQOOgR5epEMJt9_DZDVvfWQXLE&q=Space+Needle,Seattle+WA" allowfullscreen>
+  </iframe>
+
+
+
+
+{% endblock %}
